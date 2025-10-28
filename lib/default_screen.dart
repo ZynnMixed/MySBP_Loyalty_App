@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'login_screen.dart';
 import 'signup_screen.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class DefaultScreen extends StatelessWidget {
+  const DefaultScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class LoginScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const LoginPhoneScreen(),
+                        builder: (context) => const LoginScreen(),
                       ),
                     );
                   },

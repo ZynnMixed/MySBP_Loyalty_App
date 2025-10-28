@@ -1,3 +1,10 @@
+plugins {
+    // ...
+
+    // Add the dependency for the Google services Gradle plugin
+    id("com.google.gms.google-services") version "4.3.15" apply false
+
+}
 allprojects {
     repositories {
         google()
@@ -12,10 +19,8 @@ val newBuildDir: Directory =
 rootProject.layout.buildDirectory.value(newBuildDir)
 
 subprojects {
-    val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
-    project.layout.buildDirectory.value(newSubprojectBuildDir)
-}
-subprojects {
+    // Ensure all subprojects use a shared build directory under rootProject/build/<subproject>
+    buildDir = rootProject.layout.buildDirectory.dir(name).get().asFile
     project.evaluationDependsOn(":app")
 }
 
