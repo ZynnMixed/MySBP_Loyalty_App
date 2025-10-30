@@ -3,7 +3,7 @@
 // 1. Import Firebase Core for initialization
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:mysbp_loyalty_app/default_screen.dart';
+import 'package:mysbp_loyalty_app/home_screen.dart';
 
 // 3. IMPORTANT: Import the actual screen you want to show first.
 
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       // 4. Set the home screen to your SignUpScreen widget
-      home: const DefaultScreen(),
+      home: const HomeScreen(),
     );
   }
 }
